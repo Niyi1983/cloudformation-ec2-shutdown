@@ -59,7 +59,7 @@ Resources:
   MidnightShutdownRule:
     Type: 'AWS::Events::Rule'
     Properties:
-      ScheduleExpression: 'cron(0 0 * * ? *)'  # Trigger at midnight UTC
+      ScheduleExpression: 'cron(0 1 * * ? *)'  # Trigger at midnight 
       State: 'ENABLED'
       Targets:
         - Arn: !GetAtt StopEC2InstancesFunction.Arn
